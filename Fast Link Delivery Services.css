@@ -1641,7 +1641,7 @@ button:disabled {
     min-height: 360px;
     padding-top: 150px;
     padding-bottom: 150px;
-    background-image: url('../images/logistics/logistic1.jpg');
+    background-image: url('../images/logistics/logistic1.webp');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1746,7 +1746,7 @@ button:disabled {
     overflow: hidden;
     padding-top: 100px;
     padding-bottom: 100px;
-    background-image: url('../images/logistics/logistic2.jpg');
+    background-image: url('../images/logistics/logistic2.webp');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1817,7 +1817,7 @@ button:disabled {
     min-height: 360px;
     padding-top: 150px;
     padding-bottom: 150px;
-    background-image: url('../images/manpower/man\ power\ 1.jpg');
+    background-image: url('../images/manpower/man\ power\ 1.webp');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1830,7 +1830,7 @@ button:disabled {
 }
 
 .manpower-why-section {
-    background-image: url('../images/manpower/man\ power\ 2.jpg');
+    background-image: url('../images/manpower/man\ power\ 2.webp');
 }
 
 
