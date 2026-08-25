@@ -617,76 +617,47 @@ strong {
 /*=======================================================
   13. HERO / CAROUSEL
 =======================================================*/
+/*---------------------------------------
+  HERO & HERO SLIDE
+-----------------------------------------*/
 
 .hero-section-full-height {
-    position: relative;
     height: 680px;
     min-height: 680px;
+    position: relative;
+    overflow: hidden;
 }
 
 #hero-slide .carousel-item {
     height: 680px;
     min-height: 680px;
-}
-
-#hero-slide .carousel-caption {
-    position: absolute;
-    top: 1px;
-    right: 0;
-    bottom: -1px;
-    left: auto;
-    min-width: 680px;
-    min-height: 680px;
-    padding: 100px 100px 50px;
-    color: var(--secondary-color);
-    background: var(--white-color);
-    text-align: right;
-    clip-path: polygon(100% 100%, 100% 150px, 0 100%);
+    overflow: hidden;
 }
 
 .carousel-image {
     display: block;
     width: 100%;
-    min-height: 680px;
+    height: 680px;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center center;
 }
 
-.carousel:hover .carousel-control-next-icon,
-.carousel:hover .carousel-control-prev-icon {
-    opacity: 1;
-}
-
-.carousel-control-next,
-.carousel-control-prev {
-    opacity: 1;
-}
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-    width: 80px;
-    height: 80px;
-    opacity: 0;
-    background-color: var(--secondary-color);
-    background-size: 60% 60%;
-    border-radius: var(--border-radius-large);
-    transition: all 0.5s ease;
-}
-
-.carousel-control-next-icon:hover,
-.carousel-control-prev-icon:hover {
-    background-color: var(--primary-color);
-}
-
-#hero-slide .carousel-indicators-wrap {
-    position: absolute;
-    right: 0;
+#hero-slide .carousel-caption {
+    background: var(--white-color);
+    clip-path: polygon(100% 100%, 100% 150px, 0 100%);
+    color: var(--secondary-color);
+    top: 0;
     bottom: 0;
-    left: 0;
-}
-
-#hero-slide .carousel-indicators {
-    justify-content: inherit;
-    margin-right: 0;
-    margin-left: 22px;
+    right: 0;
+    left: auto;
+    width: 43%;
+    min-width: 0;
+    height: 100%;
+    min-height: 0;
+    padding: 100px 6% 50px 6%;
+    box-sizing: border-box;
+    text-align: right;
 }
 
 
@@ -2001,13 +1972,7 @@ button:disabled {
   34. DESKTOP / LARGE TABLET
 =======================================================*/
 
-@media screen and (max-width: 1170px) {
 
-    #hero-slide .carousel-image {
-        height: 100%;
-        object-fit: cover;
-    }
-}
 
 
 /*=======================================================
@@ -2478,22 +2443,69 @@ button:disabled {
 /*=======================================================
   37. SMALL MOBILE
 =======================================================*/
-
 @media screen and (max-width: 580px) {
 
     .hero-section-full-height,
-    #hero-slide .carousel-item,
-    .carousel-image {
+    #hero-slide .carousel-item {
+        height: 520px;
         min-height: 520px;
     }
 
+    #hero-slide .carousel-item {
+        overflow: hidden;
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 520px;
+        min-height: 0;
+        object-fit: cover;
+        object-position: center center;
+    }
+
     #hero-slide .carousel-caption {
-        min-width: inherit;
-        min-height: inherit;
-        padding-right: 50px;
-        clip-path: polygon(100% 100%, 100% 100px, 0 100%);
+        width: 68%;
+        min-width: 0;
+        height: 100%;
+        min-height: 0;
+        padding: 0 20px 45px 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        box-sizing: border-box;
+        text-align: right;
+        clip-path: polygon(100% 100%, 100% 0, 0 100%);
+    }
+
+    #hero-slide .carousel-caption h1,
+    #hero-slide .carousel-caption h2,
+    #hero-slide .carousel-caption h3,
+    #hero-slide .carousel-caption h4,
+    #hero-slide .carousel-caption h5,
+    #hero-slide .carousel-caption h6,
+    #hero-slide .carousel-caption p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    #hero-slide .carousel-caption h1,
+    #hero-slide .carousel-caption h2,
+    #hero-slide .carousel-caption h3,
+    #hero-slide .carousel-caption h4,
+    #hero-slide .carousel-caption h5,
+    #hero-slide .carousel-caption h6 {
+        font-size: 30px;
+        line-height: 1.15;
+    }
+
+    #hero-slide .carousel-caption p {
+        font-size: 14px;
+        line-height: 1.5;
     }
 }
+
 
 
 @media screen and (max-width: 480px) {
@@ -2523,10 +2535,11 @@ button:disabled {
 
     /* Hero */
 
-    #hero-slide .carousel-caption {
-        min-width: inherit;
-        padding-bottom: 30px;
-    }
+   #hero-slide .carousel-caption {
+    width: 70%;
+    min-width: 0;
+    padding: 0 15px 35px 40px;
+}
 
     .carousel-control-next-icon,
     .carousel-control-prev-icon {
